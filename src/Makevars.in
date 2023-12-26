@@ -14,4 +14,4 @@ OBJECTS = $(SOURCES_CPP:.cpp=.o)
 CXX_STD = CXX11
 PKG_CXXFLAGS= $(SHLIB_OPENMP_CXXFLAGS)
 PKG_CFLAGS=$(SHLIB_OPENMP_CFLAGS)
-PKG_LIBS=-lboost_filesystem -lboost_system   -lstdc++ $(LAPACK_LIBS) $(BLAS_LIBS)  $(SHLIB_OPENMP_CFLAGS) $(FLIBS) -L /opt/homebrew/Cellar/boost/1.83.0/lib/ -L /opt/homebrew/bin/ -L /opt/R/arm64/gfortran/lib
+PKG_LIBS=-lboost_filesystem -lboost_system   -lstdc++ $(LAPACK_LIBS) $(BLAS_LIBS)  $(SHLIB_OPENMP_CFLAGS) $(FLIBS) -L /opt/homebrew/Cellar/boost/1.83.0/lib/ -L /opt/homebrew/bin/ -L /opt/R/arm64/gfortran/lib -L /opt/homebrew/opt/gcc/lib/gcc/13 -L 
