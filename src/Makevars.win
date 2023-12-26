@@ -19,7 +19,8 @@ PKG_CPPFLAGS = -I"../inst/include" \
   -Duse_rcoalescence \
   -std=c++1y \
   -fpermissive \
-  -DSTRICT_R_HEADERS
+  -DSTRICT_R_HEADERS \
+  -I /opt/homebrew/Cellar/boost/1.83.0/lib/
   #-std=gnu++14
   	
   
