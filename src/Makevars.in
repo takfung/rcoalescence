@@ -11,3 +11,7 @@ PKG_LIBS += -Dwith_gdal -Duse_rcoalescence
 #PKG_LIBS:=$(filter-out $(FLIBS), $(PKG_LIBS))
 SOURCES_CPP=$(wildcard necsim/*.cpp) $(wildcard *.cpp)
 OBJECTS = $(SOURCES_CPP:.cpp=.o)
+CXX_STD = CXX11
+PKG_CXXFLAGS= $(SHLIB_OPENMP_CXXFLAGS)
+PKG_CFLAGS=$(SHLIB_OPENMP_CFLAGS)
+PKG_LIBS=-lboost_filesystem -lboost_system   -lstdc++ $(LAPACK_LIBS) $(BLAS_LIBS)  $(SHLIB_OPENMP_CFLAGS) $(FLIBS) -L /opt/homebrew/Cellar/boost/1.83.0/lib/
